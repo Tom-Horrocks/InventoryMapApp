@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            overflow: hidden;
+            /* Hide scrollbars */
+        }
+    </style>
+</head>
+
+<body onload="setsvgid()">
+    <div style="padding-left: 20px; padding-top: 20px;">
+
+        <div class="row">
+            <div class="column">
+                <form action="add.php" autocomplete="off" method='POST'>
+                    <input autocomplete="off" type="hidden" id="formsvgid" name="svgid">
+
+                    <label for="formname">Name:</label><br>
+                    <input autocomplete="off" type="text" id="formname" name="nameid"><br>
+
+                    <label for="formlocation">Location:</label><br>
+                    <input autocomplete="off" type="text" id="formlocation" name="locationid"><br>
+
+                    <label for="formfloor">Floor:</label><br>
+                    <input autocomplete="off" type="text" id="formfloor" name="floorid"><br>
+
+                    <label for="formip">IP:</label><br>
+                    <input autocomplete="off" type="text" id="formip" name="ip"><br>
+
+                    <label for="formfloorport">Floor Port:</label><br>
+                    <input autocomplete="off" type="text" id="formfloorport" name="floorport"><br>
+
+                    <label for="formswitchport">Switch Port:</label><br>
+                    <input autocomplete="off" type="text" id="formswitchport" name="switchport"><br>
+                
+            </div>
+            <div class="column">
+                
+                    <label for="formowner">Managed By:</label><br>
+                    <input autocomplete="off" type="text" id="formowner" name="ownerid"><br>
+
+                    <label for="formserial">Serial Number:</label><br>
+                    <input autocomplete="off" type="text" id="formserial" name="serial"><br>
+
+                    <label for="formdate">Purchase Date:</label><br>
+                    <input autocomplete="off" type="date" id="formdate" name="purchasedate"><br>
+
+                    <label for="formnotes">Notes:</label><br>
+                    <!--<input autocomplete="off" type="text" id="formnotes" name="notes">-->
+                    <textarea id="formnotes" name="notes" style="height:154px; width:190px;"></textarea>
+
+                    <br><br>
+                    <input type="submit" class="btn btn-info btn-lg" value="Submit">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

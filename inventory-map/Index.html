@@ -1,0 +1,1696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Inventory Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="0">
+    <div class="background-picture">
+    </div>
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#section1,accordion-toggle" data-toggle="collapse"
+                        data-parent="#accordionEx" onclick="refresh()" role="tab">Ground Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section2,accordion-toggle" data-toggle="collapse"
+                        data-parent="#accordionEx" onclick="refresh()" role="tab">First Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section3,accordion-toggle" data-toggle="collapse"
+                        data-parent="#accordionEx" onclick="refresh()" role="tab">Second Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section4,accordion-toggle" data-toggle="collapse"
+                        data-parent="#accordionEx" onclick="refresh()" role="tab">Third Floor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#section5,accordion-toggle" data-toggle="collapse"
+                        data-parent="#accordionEx" onclick="refresh()" role="tab">Fourth Floor</a>
+                </li>
+            </ul>
+            <!-- <ul class="navbar-nav navbar-right">
+                <li class="nav-item" float="right">
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search" float="right">
+                </li>
+            </ul>-->
+        </div>
+
+    </nav>
+    
+    <div class="accordion md-accordion" id="accordionEx" role="tablist" aria-multiselectable="true">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <div id="section1" class="container-fluid bg-success accordion-body collapse in"
+                    style="padding-top:70px;padding-bottom:10px" data-parent="#accordionEx" role="tablist">
+                    <!--<h1>Ground Floor</h1>-->
+                    <svg width="1500" height="600" viewBox="0 0 400 175" version="1.1" id="svgground"
+                        inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" sodipodi:docname="Groundfloor.svg"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cc="http://web.resource.org/cc/"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                        <text xml:space="preserve"
+                            style="font-style:normal;font-weight:normal;font-size:12.7144px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.317862"
+                            x="27.682859" y="123.00561" id="text8797">
+                            <tspan sodipodi:role="line" id="tspan8795" style="stroke-width:0.317862" x="27.682859"
+                                y="123.00561">The Hub</tspan>
+                            <tspan sodipodi:role="line" style="stroke-width:0.317862" x="27.682859" y="123.00561"
+                                id="tspan8799" />
+                        </text>
+                        <text xml:space="preserve"
+                            style="font-style:normal;font-weight:normal;font-size:12.7144px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.317862"
+                            x="20.487593" y="36.246445" id="text10585">
+                            <tspan sodipodi:role="line" id="tspan10583" style="stroke-width:0.317862" x="20.487593"
+                                y="36.246445">Nyquist</tspan>
+                        </text>
+                        <text xml:space="preserve"
+                            style="font-style:normal;font-weight:normal;font-size:12.7144px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.317862"
+                            x="320.82544" y="47.092407" id="text12173">
+                            <tspan sodipodi:role="line" id="tspan12171" style="stroke-width:0.317862" x="320.82544"
+                                y="47.092407">Print Room</tspan>
+                            <tspan sodipodi:role="line" style="stroke-width:0.317862" x="320.82544" y="47.092407"
+                                id="tspan12175" />
+                        </text>
+                        <text xml:space="preserve"
+                            style="font-style:normal;font-weight:normal;font-size:12.7144px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.317862"
+                            x="161.22075" y="65.338974" id="text15347">
+                            <tspan sodipodi:role="line" id="tspan15345" style="stroke-width:0.317862" x="161.22075"
+                                y="65.338974">Reception</tspan>
+                        </text>
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="M 85.084522,6.499997 H 131.17452 V 76.429641 H 99.388313" id="path2302"
+                            sodipodi:nodetypes="cccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="m 99.629334,162.30795 12.473456,-0.0555 V 76.429641" id="path2316"
+                            sodipodi:nodetypes="ccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="m 112.10279,85.965502 h 19.07173 V 76.429641 H 143.889 v 66.751029 h -31.78621"
+                            id="path2322" sodipodi:nodetypes="cccccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="m 143.889,143.18067 v 19.07172 h 25.42896 V 124.10894 H 143.889" id="path2324"
+                            sodipodi:nodetypes="ccccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="m 169.31796,130.46619 h 19.07172 v 31.7862 h -19.07172" id="path2326"
+                            sodipodi:nodetypes="cccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="M 169.31796,124.10894 V 76.429641 H 143.889" id="path2330" sodipodi:nodetypes="ccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="m 131.17452,41.464818 h 57.21516 V 6.499997 h 50.85792 v 25.428961 h -50.85792"
+                            id="path2332" sodipodi:nodetypes="cccccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="M 213.81864,6.499997 V 31.928958" id="path2336" sodipodi:nodetypes="cc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="m 236.06899,6.499997 h 79.4655 V 57.35792 H 239.2476" id="path2338"
+                            sodipodi:nodetypes="cccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="M 277.39104,6.499997 V 57.35792" id="path2340" sodipodi:nodetypes="cc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="m 239.2476,82.786886 h 76.28689 V 57.35792" id="path2342" sodipodi:nodetypes="ccc" />
+                        <path class="room" d="m 315.53449,6.499997 h 66.75102 L 395,35.107579 v 47.679307 h -79.46551"
+                            id="Print Room" title="Print Room" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:1.20137" />
+                        <path class="room"
+                            d="m 239.2476,31.928958 v 108.073092 22.25034 h -50.85792 v -31.7862 H 169.31796 V 76.429641 H 131.17452 V 41.464818 h 57.21516 v -9.53586 z"
+                            id="Reception" title="Reception" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:1.20137" />
+                        <path class="room" d="M 7.208327,6.499997 H 85.084522 L 77.328936,57.882041 H 7.4257614 Z"
+                            id="Nyquist" title="Nyquist" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:1.20137" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:1.20137;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                            d="M 7.4257614,57.882041 V 75.411446" id="path2185" />
+                        <path class="room" d="M 7.208327,76.429641 H 99.388313 V 162.25239 H 7.208327 V 76.429641"
+                            id="The Hub" title="The Hub" data-bs-toggle="tooltip" onclick="check(id)" data-toggle="modal"
+                            data-target="#ResultsModal" style="stroke-width:1.20137" />
+                    </svg>
+                </div>
+                <div id="section2" class="container-fluid bg-warning accordion-body collapse in"
+                    style="padding-top:70px;padding-bottom:70px" data-parent="#accordionEx" role="tablist">
+                    <!--<h1>First Floor</h1>-->
+                    <svg id="svgfirst" viewBox="0 0 210 220" width="1500"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" version="1.1"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        sodipodi:docname="floor1.svg" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+                        sodipodi:docname="Groundfloor.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cc="http://web.resource.org/cc/"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                        <text xml:space="preserve"
+                            style="font-size:3.63097px;line-height:1.25;font-family:sans-serif;stroke-width:0.247565"
+                            x="6.270165" y="34.556469" id="text2810" transform="scale(0.98827238,1.0118668)">
+                            <tspan sodipodi:role="line" id="tspan2808" style="stroke-width:0.247565" x="7.270165"
+                                y="34.556469">Penybont</tspan>
+                        </text>
+                        <text xml:space="preserve"
+                            style="font-size:3.45456px;line-height:1.25;font-family:sans-serif;stroke-width:0.235537"
+                            x="55.270493" y="99.737175" id="text7065" transform="scale(1.0164292,0.98383634)">
+                            <tspan sodipodi:role="line" id="tspan7063" style="stroke-width:0.235537" x="56"
+                                y="99.737175">Casnewydd</tspan>
+                        </text>
+                        <text xml:space="preserve"
+                            style="font-size:3.45456px;line-height:1.25;font-family:sans-serif;display:inline;stroke-width:0.235537"
+                            x="56.702175" y="121.58775" id="text7065-3" transform="scale(1.0164292,0.98383635)">
+                            <tspan sodipodi:role="line" id="tspan7063-6" style="stroke-width:0.235537" x="57.702175"
+                                y="121.58775">Caerdydd</tspan>
+                        </text>
+                        <path class="room" id="L1.A1" title="L1.A1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 41.275 77.5229 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.A2" title="L1.A2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 34.3958 77.5229 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.A3" title="L1.A3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 27.5167 77.5229 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.A4" title="L1.A4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 20.6375 77.5229 h -6.87917 v 3.96875 H 20.6375 v -3.96875" />
+                        <path class="room" id="L1.A5" title="L1.A5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 13.7583 77.5229 H 6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.B1" title="L1.B1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 41.275 73.5542 h -6.87917 v 3.96875 H 41.275 v -3.96875" />
+                        <path class="room" id="L1.B2" title="L1.B2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 34.3958 73.5542 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.B3" title="L1.B3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 27.5167 73.5542 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.B4" title="L1.B4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 20.6375 73.5542 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.B5" title="L1.B5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 13.7583 73.5542 H 6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.C1" title="L1.C1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 41.275 60.0604 h -6.87917 v 3.96875 H 41.275 v -3.96875" />
+                        <path class="room" id="L1.C2" title="L1.C2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 34.3958 60.0604 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.C3" title="L1.C3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 27.5167 60.0604 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.C4" title="L1.C4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 20.6375 60.0604 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.C5" title="L1.C5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 13.7583 60.0604 H 6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.D1" title="L1.D1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 41.275 56.0917 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.D2" title="L1.D2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 34.3958 56.0917 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.D3" title="L1.D3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 27.5167 56.0917 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.D4" title="L1.D4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 20.6375 56.0917 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.D5" title="L1.D5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 13.7583 56.0917 H 6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L1.F1" title="L1.F1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 76.2 37.5708 V 44.45 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L1.E1" title="L1.E1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 72.2312 37.5708 V 44.45 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.E3" title="L1.E3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 72.2312 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L1.F4" title="L1.F4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 76.2 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.E4" title="L1.E4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 72.2312 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.E2" title="L1.E2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 72.2312 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.F2" title="L1.F2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 76.2 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.F3" title="L1.F3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 76.2 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L1.F5" title="L1.F5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 76.2 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.E5" title="L1.E5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 72.2312 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.H1" title="L1.H1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 93.3979 37.5708 V 44.45 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L1.G1" title="L1.G1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 89.4292 37.5708 V 44.45 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.G3" title="L1.G3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 89.4292 23.8125 v 6.87917 H 93.3979 V 23.8125 h -3.96875" />
+                        <path class="room" id="L1.H4" title="L1.H4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 93.3979 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.G4" title="L1.G4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 89.4292 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.G2" title="L1.G2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 89.4292 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.H2" title="L1.H2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 93.3979 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.H3" title="L1.H3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 93.3979 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L1.H5" title="L1.H5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 93.3979 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.G5" title="L1.G5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 89.4292 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.J1" title="L1.J1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 110.596 37.5708 V 44.45 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L1.I1" title="L1.I1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 106.627 37.5708 V 44.45 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.I3" title="L1.I3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 106.627 23.8125 v 6.87917 h 3.96874 V 23.8125 h -3.96875" />
+                        <path class="room" id="L1.J4" title="L1.J4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 110.596 16.9333 V 23.8125 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.I4" title="L1.I4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 106.627 16.9333 V 23.8125 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.I2" title="L1.I2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 106.627 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.J2" title="L1.J2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 110.596 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.J3" title="L1.J3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 110.596 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L1.I5" title="L1.I5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 106.627 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.J5" title="L1.J5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 110.596 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.L1" title="L1.L1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 145.521 37.5708 V 44.45 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.K1" title="L1.K1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 141.552 37.5708 V 44.45 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.K3" title="L1.K3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L1.L4" title="L1.L4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 145.521 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.K4" title="L1.K4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 141.552 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.K2" title="L1.K2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.L2" title="L1.L2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.L3" title="L1.L3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L1.N1" title="L1.N1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 162.719 37.5708 V 44.45 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L1.M1" title="L1.M1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 158.75 37.5708 V 44.45 h 3.96874 V 37.5708 H 158.75" />
+                        <path class="room" id="L1.M3" title="L1.M3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 23.8125 v 6.87917 h 3.96874 V 23.8125 H 158.75" />
+                        <path class="room" id="L1.N4" title="L1.N4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 162.719 16.9333 V 23.8125 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.M4" title="L1.M4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 158.75 16.9333 V 23.8125 h 3.96874 V 16.9333 H 158.75" />
+                        <path class="room" id="L1.M2" title="L1.M2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 30.6917 v 6.87917 h 3.96875 V 30.6917 H 158.75" />
+                        <path class="room" id="L1.N2" title="L1.N2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.N3" title="L1.N3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L1.S5" title="L1.S5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.058 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L1.T5" title="L1.T5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.09 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.T3" title="L1.T3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.09 66.1458 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.S2" title="L1.S2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.058 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.T2" title="L1.T2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.09 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.T4" title="L1.T4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.09 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L1.S4" title="L1.S4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.058 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L1.S3" title="L1.S3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.058 66.1458 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.T1" title="L1.T1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.09 52.3875 v 6.87917 h 3.96875 V 52.3875 h -3.96875" />
+                        <path class="room" id="L1.S1" title="L1.S1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.058 52.3875 v 6.87917 h 3.96875 V 52.3875 h -3.96875" />
+                        <path class="room" id="L1.O5" title="L1.O5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L1.P5" title="L1.P5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.P3" title="L1.P3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 66.1458 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.O2" title="L1.O2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.P2" title="L1.P2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.P4" title="L1.P4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L1.O4" title="L1.O4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L1.O3" title="L1.O3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 66.1458 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.P1" title="L1.P1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 52.3875 v 6.87917 h 3.96875 V 52.3875 h -3.96875" />
+                        <path class="room" id="L1.O1" title="L1.O1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 52.3875 v 6.87917 h 3.96875 V 52.3875 h -3.96875" />
+                        <path class="room" id="L1.Q4" title="L1.Q4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L1.R4" title="L1.R4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.R2" title="L1.R2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 66.1458 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.Q1" title="L1.Q1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.R1" title="L1.R1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1.R3" title="L1.R3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L1.Q3" title="L1.Q3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L1.Q2" title="L1.Q2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 66.1458 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L1 Breakout Space Sofa" title="Breakout Space Sofa" data-bs-toggle="tooltip"
+                            onclick="check(id)" data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;stroke-opacity: 1;
+                        stroke:#000000;
+                        stroke-linecap:butt;
+                        stroke-linejoin:miter;
+                        stroke-miterlimit:4;
+                        stroke-dasharray:0.793749, 0.793749;
+                        stroke-dashoffset:0;
+                        stroke-opacity:1" d="m 84.6667 64.8229 h 30.4271 v 23.8125 H 84.6667 v -23.8125" />
+                        <path class="room" id="L1 Breakout Space TV" title="Breakout Space TV" data-bs-toggle="tooltip"
+                            onclick="check(id)" data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;
+                        stroke:#000000;
+                        stroke-linecap:butt;
+                        stroke-linejoin:miter;
+                        stroke-miterlimit:4;
+                        stroke-dasharray:0.793749, 0.793749;
+                        stroke-dashoffset:0.74083236;
+                        stroke-opacity:1" d="m 84.6667 88.6354 l -29.1042 1e-006 v -23.8125 l 29.1042 -1e-006 Z"
+                            sodipodi:nodetypes="ccccc" />
+                        <path class="room" id="L1 Breakout Space Surf" title="Breakout Space Surf" data-bs-toggle="tooltip"
+                            onclick="check(id)" data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;
+                        stroke:#000000;
+                        stroke-linecap:butt;
+                        stroke-linejoin:miter;
+                        stroke-miterlimit:4;
+                        stroke-dasharray:0.793749, 0.793749;
+                        stroke-dashoffset:0;
+                        stroke-opacity:1"
+                            d="m 41.0104 9.26042 l 11.9063 -2.64583 l 9.78958 -1.5875 V 27.5167 H 41.0104 V 9.26042"
+                            sodipodi:nodetypes="cccccc" />
+                        <path class="room" id="L1 Breakout Space Lockers" title="Breakout Space Lockers" data-bs-toggle="tooltip"
+                            onclick="check(id)" data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3 ;
+                        stroke:#000000;
+                        stroke-linecap:butt;
+                        stroke-linejoin:miter;
+                        stroke-miterlimit:4;
+                        stroke-dasharray:0.793749, 0.793749;
+                        stroke-dashoffset:0;
+                        stroke-opacity:1" d="M 41.0104 21.1667 H 23.8125 v 23.8125 h 17.1979 Z" />
+                        <path class="room" id="Penybont" title="Penybont" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 23.8125 44.9792 H 5.29167 v -19.8438 h 3.96875 v -3.96875 H 23.8125 Z" />
+                        <path class="room" id="L1 Printers" title="Printers" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;
+                            stroke-width:0.26499999;
+                            stroke-linecap:butt;
+                            stroke-linejoin:miter;
+                            stroke-miterlimit:0;
+                            stroke-dasharray:0.26499999, 0.52999997;
+                            stroke-dashoffset:1.13949991;
+                            stroke-opacity:1" d="M 84.6667 64.8229 V 59.0021 H 103.188 v 5.82083 Z"
+                            sodipodi:nodetypes="ccccc" />
+                        <path class="room" id="L1 West Wing" title="West Wing" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 19.8438 146.844 h 22.4896 v 51.5938 l -15.875 6.61458 l -21.1667 11.9063 V 156.104 H 19.8438 v -9.26041" />
+                        <path class="room" id="Library" title="Library" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 42.3333 146.844 h 34.3958 v 46.3021 H 42.3333 Z" />
+                        <path class="room" id="Casnewydd" title="Casnewydd" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 76.7292 88.6354 H 55.5625 V 105.833 H 76.7292 V 88.6354" />
+                        <path class="room" id="Caerdydd" title="Caerdydd" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 76.7292 105.833 v 26.4583 H 55.5625 v -26.4583 Z" />
+                        <path id="path7938"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 5.29167 88.6354 H 37.0417 v 43.6562 h 7.9375 v -14.5521 h -7.9375 h 18.5208 v 14.5521 h -10.5833 h 31.75 v 14.5521 H 39.6875 v -14.5521 v 14.5521 H 5.29167 H 29.1042 V 108.479 H 5.29167 V 99.2188 H 17.1979 v 9.26042 v -19.8438" />
+                        <path id="path7940"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 29.1042 128.323 V 127 H 5.29167" />
+                        <path id="path7942"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="m 18.5208 127 v 7.9375 h 10.5833" />
+                        <path id="path7944"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 29.1042 141.552 H 19.8438 v 5.29167 v 9.26041 H 5.29167 v -9.26041 H 19.8438" />
+                        <path id="path7946"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="m 42.3333 146.844 v 46.3021" />
+                        <path id="path7948"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 19.8438 156.104 H 30.4271" />
+                        <path id="path8182"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 179.917 54.2396 V 21.1667" />
+                        <path id="path8184"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 179.917 45.7729 H 198.438" />
+                        <circle id="path8208"
+                            style="fill: none; fill-opacity: 1; stroke: #000000; stroke-dasharray: none; stroke-dashoffset: 0; stroke-miterlimit: 4; stroke-opacity: 1; stroke-width: 0.208;"
+                            cx="189.206" cy="36.0546" r="7.92299" />
+                        <path id="path8345"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 189.177 45.7729 V 43.9208" />
+                        <path id="path8347"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.289837px;"
+                            d="M 198.438 38.3646 H 196.85" />
+                        <path id="path3812"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="m 198.438 30.4271 v 23.8125 H 179.917 V 88.6354 H 76.7292 V 193.146 H 42.3333 v 5.29167 l -15.875 6.61458 l -21.1667 11.9063 V 25.1354 h 3.96875 v -3.96875 H 41.0104 V 9.26042 L 52.9167 6.61458 L 62.7062 5.02708 L 72.7604 3.96875 h 27.7812 l 18.5208 1.32292 l 15.875 1.32292 c 5.29167 1.32292 17.4321 4.0273 17.1979 3.96875 l 18.5208 6.61458 l 15.875 6.61458 l 11.9063 6.61458 v 0"
+                            sodipodi:nodetypes="cccccccccccccccccccccccccc" />
+                    </svg>
+                </div>
+                <div id="section3" class="container-fluid bg-secondary accordion-body collapse in"
+                    style="padding-top:70px;padding-bottom:70px" data-parent="#accordionEx" role="tablist">
+                    <!--<h1>Second Floor</h1>-->
+                    <svg id="svgsecond" viewBox="0 0 210 220" width="1500"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" version="1.1"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        sodipodi:docname="floor1.svg" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+                        sodipodi:docname="Groundfloor.svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cc="http://web.resource.org/cc/"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                        <text xml:space="preserve"
+                            style="font-size:3.63097px;line-height:1.25;font-family:sans-serif;stroke-width:0.247565"
+                            x="6.270165" y="34.556469" id="text2810" transform="scale(0.98827238,1.0118668)">
+                            <tspan sodipodi:role="line" id="tspan2808" style="stroke-width:0.247565" x="7.270165"
+                                y="34.556469">Gwynedd</tspan>
+                        </text>
+                        <text xml:space="preserve"
+                            style="font-size:3.63097px;line-height:1.25;font-family:sans-serif;stroke-width:0.247565"
+                            x="6.270165" y="34.556469" id="text2810" transform="scale(0.98827238,1.0118668)">
+                            <tspan sodipodi:role="line" id="tspan2808" style="stroke-width:0.247565" x="28"
+                                y="34.556469">Clwyd</tspan>
+                        </text>
+                        <text xml:space="preserve"
+                            style="font-size:3.45456px;line-height:1.25;font-family:sans-serif;stroke-width:0.235537"
+                            x="55.270493" y="99.737175" id="text7065" transform="scale(1.0164292,0.98383634)">
+                            <tspan sodipodi:role="line" id="tspan7063" style="stroke-width:0.235537" x="57"
+                                y="99.737175">Pembroke</tspan>
+                        </text>
+                        <text xml:space="preserve"
+                            style="font-size:3.45456px;line-height:1.25;font-family:sans-serif;display:inline;stroke-width:0.235537"
+                            x="56.702175" y="121.58775" id="text7065-3" transform="scale(1.0164292,0.98383635)">
+                            <tspan sodipodi:role="line" id="tspan7063-6" style="stroke-width:0.235537" x="56.702175"
+                                y="121.58775">Ceredigion</tspan>
+                        </text>
+                        <path class="room" id="L2.A1" title="L2.A1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 41.275 77.5229 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.A2" title="L2.A2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 34.3958 77.5229 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.A3" title="L2.A3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 27.5167 77.5229 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.A4" title="L2.A4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 20.6375 77.5229 h -6.87917 v 3.96875 H 20.6375 v -3.96875" />
+                        <path class="room" id="L2.A5" title="L2.A5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 13.7583 77.5229 H 6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.B1" title="L2.B1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 41.275 73.5542 h -6.87917 v 3.96875 H 41.275 v -3.96875" />
+                        <path class="room" id="L2.B2" title="L2.B2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 34.3958 73.5542 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.B3" title="L2.B3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 27.5167 73.5542 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.B4" title="L2.B4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 20.6375 73.5542 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.B5" title="L2.B5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 13.7583 73.5542 H 6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.C1" title="L2.C1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 41.275 60.0604 h -6.87917 v 3.96875 H 41.275 v -3.96875" />
+                        <path class="room" id="L2.C2" title="L2.C2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 34.3958 60.0604 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.C3" title="L2.C3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 27.5167 60.0604 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.C4" title="L2.C4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 20.6375 60.0604 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.C5" title="L2.C5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 13.7583 60.0604 H 6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.D1" title="L2.D1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 41.275 56.0917 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.D2" title="L2.D2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 34.3958 56.0917 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.D3" title="L2.D3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 27.5167 56.0917 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.D4" title="L2.D4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 20.6375 56.0917 h -6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.D5" title="L2.D5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 13.7583 56.0917 H 6.87917 v 3.96875 h 6.87917 v -3.96875" />
+                        <path class="room" id="L2.F1" title="L2.F1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 76.2 37.5708 V 44.45 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L2.E1" title="L2.E1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 72.2312 37.5708 V 44.45 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.E3" title="L2.E3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 72.2312 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L2.F4" title="L2.F4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 76.2 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.E4" title="L2.E4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 72.2312 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.E2" title="L2.E2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 72.2312 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.F2" title="L2.F2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 76.2 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.F3" title="L2.F3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 76.2 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L2.F5" title="L2.F5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 76.2 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.E5" title="L2.E5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 72.2312 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.H1" title="L2.H1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 93.3979 37.5708 V 44.45 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L2.G1" title="L2.G1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 89.4292 37.5708 V 44.45 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.G3" title="L2.G3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 89.4292 23.8125 v 6.87917 H 93.3979 V 23.8125 h -3.96875" />
+                        <path class="room" id="L2.H4" title="L2.H4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 93.3979 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.G4" title="L2.G4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 89.4292 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.G2" title="L2.G2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 89.4292 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.H2" title="L2.H2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 93.3979 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.H3" title="L2.H3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 93.3979 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L2.H5" title="L2.H5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 93.3979 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.G5" title="L2.G5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 89.4292 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.J1" title="L2.J1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 110.596 37.5708 V 44.45 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L2.I1" title="L2.I1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 106.627 37.5708 V 44.45 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.I3" title="L2.I3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 106.627 23.8125 v 6.87917 h 3.96874 V 23.8125 h -3.96875" />
+                        <path class="room" id="L2.J4" title="L2.J4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 110.596 16.9333 V 23.8125 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.I4" title="L2.I4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 106.627 16.9333 V 23.8125 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.I2" title="L2.I2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 106.627 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.J2" title="L2.J2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 110.596 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.J3" title="L2.J3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 110.596 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L2.I5" title="L2.I5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 106.627 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.J5" title="L2.J5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 110.596 10.0542 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.L1" title="L2.L1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 145.521 37.5708 V 44.45 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.K1" title="L2.K1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 141.552 37.5708 V 44.45 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.K3" title="L2.K3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L2.L4" title="L2.L4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 145.521 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.K4" title="L2.K4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 141.552 16.9333 V 23.8125 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.K2" title="L2.K2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.L2" title="L2.L2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.L3" title="L2.L3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L2.N1" title="L2.N1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 162.719 37.5708 V 44.45 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L2.M1" title="L2.M1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 158.75 37.5708 V 44.45 h 3.96874 V 37.5708 H 158.75" />
+                        <path class="room" id="L2.M3" title="L2.M3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 23.8125 v 6.87917 h 3.96874 V 23.8125 H 158.75" />
+                        <path class="room" id="L2.N4" title="L2.N4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 162.719 16.9333 V 23.8125 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.M4" title="L2.M4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 158.75 16.9333 V 23.8125 h 3.96874 V 16.9333 H 158.75" />
+                        <path class="room" id="L2.M2" title="L2.M2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 30.6917 v 6.87917 h 3.96875 V 30.6917 H 158.75" />
+                        <path class="room" id="L2.N2" title="L2.N2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 30.6917 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.N3" title="L2.N3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 23.8125 v 6.87917 h 3.96875 V 23.8125 h -3.96875" />
+                        <path class="room" id="L2.S5" title="L2.S5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.058 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L2.T5" title="L2.T5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.09 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.T3" title="L2.T3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.09 66.1458 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.S2" title="L2.S2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.058 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.T2" title="L2.T2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.09 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.T4" title="L2.T4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.09 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L2.S4" title="L2.S4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.058 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L2.S3" title="L2.S3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.058 66.1458 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.T1" title="L2.T1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.09 52.3875 v 6.87917 h 3.96875 V 52.3875 h -3.96875" />
+                        <path class="room" id="L2.S1" title="L2.S1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.058 52.3875 v 6.87917 h 3.96875 V 52.3875 h -3.96875" />
+                        <path class="room" id="L2.O5" title="L2.O5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L2.P5" title="L2.P5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.P3" title="L2.P3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 66.1458 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.O2" title="L2.O2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.P2" title="L2.P2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.P4" title="L2.P4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L2.O4" title="L2.O4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L2.O3" title="L2.O3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 66.1458 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.P1" title="L2.P1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 158.75 52.3875 v 6.87917 h 3.96875 V 52.3875 h -3.96875" />
+                        <path class="room" id="L2.O1" title="L2.O1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.719 52.3875 v 6.87917 h 3.96875 V 52.3875 h -3.96875" />
+                        <path class="room" id="L2.Q4" title="L2.Q4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96874" />
+                        <path class="room" id="L2.R4" title="L2.R4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 79.9042 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.R2" title="L2.R2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 66.1458 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.Q1" title="L2.Q1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.R1" title="L2.R1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 59.2667 v 6.87917 h 3.96874 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2.R3" title="L2.R3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 141.552 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L2.Q3" title="L2.Q3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 73.025 v 6.87917 h 3.96875 V 73.025 h -3.96875" />
+                        <path class="room" id="L2.Q2" title="L2.Q2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.521 66.1458 v 6.87917 h 3.96875 v -6.87917 h -3.96875" />
+                        <path class="room" id="L2 Breakout Space Sofa" title="Breakout Space Sofa" data-bs-toggle="tooltip"
+                            onclick="check(id)" data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;stroke-opacity: 1;
+                        stroke:#000000;
+                        stroke-linecap:butt;
+                        stroke-linejoin:miter;
+                        stroke-miterlimit:4;
+                        stroke-dasharray:0.793749, 0.793749;
+                        stroke-dashoffset:0;
+                        stroke-opacity:1" d="m 84.6667 64.8229 h 30.4271 v 23.8125 H 84.6667 v -23.8125" />
+                        <path class="room" id="L2 Breakout Space TV" title="Breakout Space TV" data-bs-toggle="tooltip"
+                            onclick="check(id)" data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;
+                        stroke:#000000;
+                        stroke-linecap:butt;
+                        stroke-linejoin:miter;
+                        stroke-miterlimit:4;
+                        stroke-dasharray:0.793749, 0.793749;
+                        stroke-dashoffset:0.74083236;
+                        stroke-opacity:1" d="m 84.6667 88.6354 l -29.1042 1e-006 v -23.8125 l 29.1042 -1e-006 Z"
+                            sodipodi:nodetypes="ccccc" />
+                        <path class="room" id="L2 Breakout Space Surf" title="Breakout Space Surf" data-bs-toggle="tooltip"
+                            onclick="check(id)" data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;
+                        stroke:#000000;
+                        stroke-linecap:butt;
+                        stroke-linejoin:miter;
+                        stroke-miterlimit:4;
+                        stroke-dasharray:0.793749, 0.793749;
+                        stroke-dashoffset:0;
+                        stroke-opacity:1"
+                            d="m 41.0104 9.26042 l 11.9063 -2.64583 l 9.78958 -1.5875 V 27.5167 H 41.0104 V 9.26042"
+                            sodipodi:nodetypes="cccccc" />
+                        <path class="room" id="Clwyd" title="Clwyd" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3 "
+                            d="M 41.0104 21.1667 H 23.8125 v 23.8125 h 17.1979 Z" />
+                        <path class="room" id="Gwynedd" title="Gwynedd" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 23.8125 44.9792 H 5.29167 v -19.8438 h 3.96875 v -3.96875 H 23.8125 Z" />
+                        <path class="room" id="L2 Printers" title="Printers" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;
+                            stroke-width:0.26499999;
+                            stroke-linecap:butt;
+                            stroke-linejoin:miter;
+                            stroke-miterlimit:0;
+                            stroke-dasharray:0.26499999, 0.52999997;
+                            stroke-dashoffset:1.13949991;
+                            stroke-opacity:1" d="M 84.6667 64.8229 V 59.0021 H 103.188 v 5.82083 Z"
+                            sodipodi:nodetypes="ccccc" />
+                        <path class="room" id="L2 West Wing" title="West Wing" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 19.8438 146.844 h 22.4896 v 51.5938 l -15.875 6.61458 l -21.1667 11.9063 V 156.104 H 19.8438 v -9.26041" />
+                        <path class="room" id="L2 Kitchen" title="Kitchen" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 42.3333 146.844 h 34.3958 v 46.3021 H 42.3333 Z" />
+                        <path class="room" id="Pembroke" title="Pembroke" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 76.7292 88.6354 H 55.5625 V 105.833 H 76.7292 V 88.6354" />
+                        <path class="room" id="Ceredigion" title="Ceredigion" data-bs-toggle="tooltip"
+                            onclick="check(id)" data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 76.7292 105.833 v 26.4583 H 55.5625 v -26.4583 Z" />
+                        <path id="path7938"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 5.29167 88.6354 H 37.0417 v 43.6562 h 7.9375 v -14.5521 h -7.9375 h 18.5208 v 14.5521 h -10.5833 h 31.75 v 14.5521 H 39.6875 v -14.5521 v 14.5521 H 5.29167 H 29.1042 V 108.479 H 5.29167 V 99.2188 H 17.1979 v 9.26042 v -19.8438" />
+                        <path id="path7940"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 29.1042 128.323 V 127 H 5.29167" />
+                        <path id="path7942"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="m 18.5208 127 v 7.9375 h 10.5833" />
+                        <path id="path7944"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 29.1042 141.552 H 19.8438 v 5.29167 v 9.26041 H 5.29167 v -9.26041 H 19.8438" />
+                        <path id="path7946"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="m 42.3333 146.844 v 46.3021" />
+                        <path id="path8182"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 179.917 54.2396 V 21.1667" />
+                        <path id="path8184"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 179.917 45.7729 H 198.438" />
+                        <circle id="path8208"
+                            style="fill: none; fill-opacity: 1; stroke: #000000; stroke-dasharray: none; stroke-dashoffset: 0; stroke-miterlimit: 4; stroke-opacity: 1; stroke-width: 0.208;"
+                            cx="189.206" cy="36.0546" r="7.92299" />
+                        <path id="path8345"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="M 189.177 45.7729 V 43.9208" />
+                        <path id="path8347"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.289837px;"
+                            d="M 198.438 38.3646 H 196.85" />
+                        <path id="path3812"
+                            style="fill: none; stroke: #000000; stroke-linecap: butt; stroke-linejoin: miter; stroke-opacity: 1; stroke-width: 0.264583px;"
+                            d="m 198.438 30.4271 v 23.8125 H 179.917 V 88.6354 H 76.7292 V 193.146 H 42.3333 v 5.29167 l -15.875 6.61458 l -21.1667 11.9063 V 25.1354 h 3.96875 v -3.96875 H 41.0104 V 9.26042 L 52.9167 6.61458 L 62.7062 5.02708 L 72.7604 3.96875 h 27.7812 l 18.5208 1.32292 l 15.875 1.32292 c 5.29167 1.32292 17.4321 4.0273 17.1979 3.96875 l 18.5208 6.61458 l 15.875 6.61458 l 11.9063 6.61458 v 0"
+                            sodipodi:nodetypes="cccccccccccccccccccccccccc" />
+                    </svg>
+                </div>
+                <div id="section4" class="container-fluid bg-danger accordion-body collapse in"
+                    style="padding-top:70px;padding-bottom:70px" data-parent="#accordionEx" role="tablist">
+                    <!--<h1>Third Floor</h1>-->
+                    <svg viewBox="0 0 210 225" width="1500" version="1.1" id="svgthird"
+                        inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" sodipodi:docname="Thirdfloor.svg"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cc="http://web.resource.org/cc/"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                        <text xml:space="preserve"
+                            style="font-style:normal;font-weight:normal;font-size:3.88056px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                            x="11.305097" y="41.558388" id="text25384">
+                            <tspan sodipodi:role="line" id="tspan25382"
+                                style="font-size:3.88056px;stroke-width:0.264583" x="11.305097" y="41.558388">Dyfed
+                            </tspan>
+                        </text>
+                        <text xml:space="preserve"
+                            style="font-style:normal;font-weight:normal;font-size:3.88056px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                            x="8.8995352" y="69.299751" id="text32850">
+                            <tspan sodipodi:role="line" id="tspan32848"
+                                style="font-size:3.88056px;stroke-width:0.264583" x="9.8995352" y="69.299751">Abertawe
+                            </tspan>
+                        </text>
+                        <text xml:space="preserve"
+                            style="font-size:3.88056px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+                            x="7.5633225" y="87.045631" id="text40654">
+                            <tspan sodipodi:role="line" id="tspan40652"
+                                style="font-size:3.88056px;stroke-width:0.264583" x="8.5633225" y="87.045631">Glamorgan
+                            </tspan>
+                        </text>
+                        <path class="room" id="soc" title="SOC" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 92.604167,68.512782 h 25.957913 l -0.0287,24.355968 H 92.604167 l 0,-24.355968"
+                            id="SOC" sodipodi:nodetypes="ccccc" />
+                        <path class="room" id="L3.B1" title="L3.B1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 79.024774,40.571975 v 7.053021 l 4.034419,6e-6 V 40.57198 l -4.034419,-5e-6" />
+                        <path class="room" id="L3.A1" title="L3.A1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 74.990355,40.571988 -2.1e-5,7.053006 4.03444,2e-6 -1.1e-5,-7.05301 -4.034408,2e-6" />
+                        <path class="room" id="L3.A3" title="L3.A3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 74.990355,26.465953 v 7.053021 h 4.034419 l -1.1e-5,-7.053023 -4.034408,2e-6" />
+                        <path class="room" id="L3.B4" title="L3.B4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 79.024763,19.412948 v 7.053003 l 4.03443,1.2e-5 v -7.053014 l -4.03443,-1e-6" />
+                        <path class="room" id="L3.A4" title="L3.A4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 74.990334,19.412942 2.1e-5,7.053011 4.034408,-2e-6 v -7.053003 l -4.034429,-6e-6" />
+                        <path class="room" id="L3.A2" title="L3.A2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 74.990355,33.518974 -10e-6,7.053019 4.034418,-7e-6 1.1e-5,-7.053012 h -4.034419" />
+                        <path class="room" id="L3.B2" title="L3.B2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 79.024774,33.518974 -1.1e-5,7.053012 4.03443,7e-6 v -7.053022 l -4.034419,3e-6" />
+                        <path class="room" id="L3.B3" title="L3.B3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 79.024763,26.465951 1.1e-5,7.053023 4.034419,-3e-6 v -7.053008 l -4.03443,-1.2e-5" />
+                        <path class="room" id="L3.B5" title="L3.B5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 79.024763,12.359934 v 7.053014 l 4.03443,1e-6 V 12.35994 l -4.03443,-6e-6" />
+                        <path class="room" id="L3.A5" title="L3.A5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 74.990355,12.359936 -2.1e-5,7.053006 4.034429,6e-6 v -7.053014 l -4.034408,2e-6" />
+                        <path class="room" id="L3.D1" title="L3.D1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 96.507248,40.571992 1.1e-5,7.053004 4.034411,4e-6 v -7.053022 l -4.034422,1.4e-5" />
+                        <path class="room" id="L3.C1" title="L3.C1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 92.472829,40.57198 -1e-5,7.053014 4.034429,8e-6 v -7.053023 l -4.034419,1e-6" />
+                        <path class="room" id="L3.C3" title="L3.C3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 92.472829,26.465964 v 7.053007 l 4.03443,-1e-5 -1.1e-5,-7.053 -4.034419,3e-6" />
+                        <path class="room" id="L3.D4" title="L3.D4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 96.507259,19.412943 -1.1e-5,7.053018 4.034412,-1e-6 2e-5,-7.053011 -4.034432,-1.4e-5" />
+                        <path class="room" id="L3.C4" title="L3.C4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 92.472829,19.412937 v 7.053027 l 4.034419,-3e-6 v -7.053026 l -4.034419,2e-6" />
+                        <path class="room" id="L3.D2" title="L3.D2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 96.507227,33.518968 2.1e-5,7.053011 4.034422,-10e-7 -1e-5,-7.053009 -4.034433,-10e-7" />
+                        <path class="room" id="L3.C2" title="L3.C2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 92.472829,33.518971 v 7.053022 l 4.034419,-1.4e-5 -2.1e-5,-7.053011 -4.034398,3e-6" />
+                        <path class="room" id="L3.D3" title="L3.D3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 96.507248,26.465961 1.1e-5,7.053 4.034411,-2e-6 -1e-5,-7.052999 -4.034412,1e-6" />
+                        <path class="room" id="L3.P3" title="L3.P3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 104.24583,73.554167 -7.052997,10e-6 1e-5,4.03442 7.052997,-10e-6 -1e-5,-4.03442" />
+                        <path class="room" id="L3.O2" title="L3.O2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 111.38958,83.34375 -7.053,1e-5 1e-5,4.034419 7.053,-1e-5 -1e-5,-4.034419" />
+                        <path class="room" id="L3.O3" title="L3.O3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 104.24583,83.34375 -7.053,1e-5 v 4.034409 l 7.053,-1e-5 V 83.34375" />
+                        <path class="room" id="L3.P2" title="L3.P2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 111.38958,73.554167 -7.053,10e-6 v 4.03441 l 7.053,-1e-5 v -4.03441" id="L3.P2" />
+                        <path class="room" id="L3.P1" title="L3.P1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 111.48033,77.588587 7.053,-1e-5 v -4.03441 l -7.053,10e-6 v 4.03441" />
+                        <path class="room" id="L3.O1" title="L3.O1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 118.44258,83.34374 -7.053,1e-5 v 4.03441 l 7.053,-10e-6 v -4.03441" />
+                        <path class="room" id="L3.D5" title="L3.D5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 96.507248,12.359927 v 7.053008 l 4.034432,1.4e-5 -1e-5,-7.053024 -4.034422,2e-6" />
+                        <path class="room" id="L3.C5" title="L3.C5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 92.472829,12.359929 v 7.053008 l 4.034419,-2e-6 v -7.053008 l -4.034419,2e-6" />
+                        <path class="room" id="L3.F1" title="L3.F1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 113.98972,40.57199 v 7.053012 l 4.0344,10e-7 1e-5,-7.05302 -4.03441,7e-6" />
+                        <path class="room" id="L3.E1" title="L3.E1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 109.9553,40.571992 v 7.053011 l 4.0344,2e-6 1e-5,-7.053028 -4.03442,1.3e-5" />
+                        <path class="room" id="L3.E3" title="L3.E3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 109.9553,26.465951 1e-5,7.053022 4.0344,10e-7 1e-5,-7.053006 -4.03442,-7e-6" />
+                        <path class="room" id="L3.F4" title="L3.F4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 113.98972,19.412946 v 7.053009 l 4.03441,6e-6 -1e-5,-7.053014 -4.03442,2e-6" />
+                        <path class="room" id="L3.E4" title="L3.E4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 109.9553,19.412947 v 7.053004 l 4.03442,1.7e-5 -2e-5,-7.053019 -4.03441,-4e-6" />
+                        <path class="room" id="L3.E2" title="L3.E2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 109.95529,33.518976 v 7.053014 l 4.03442,-1.3e-5 v -7.053003 l -4.03442,2e-6" />
+                        <path class="room" id="L3.F2" title="L3.F2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 113.98971,33.518974 v 7.053003 l 4.03442,6e-6 v -7.053009 h -4.03442" />
+                        <path class="room" id="L3.F3" title="L3.F3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 113.98972,26.465968 -1e-5,7.053006 h 4.03442 v -7.053013 l -4.03441,7e-6" />
+                        <path class="room" id="L3.E5" title="L3.E5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 109.95529,12.359936 v 7.053009 l 4.03441,4e-6 2e-5,-7.053025 -4.03443,1.2e-5" />
+                        <path class="room" id="L3.F5" title="L3.F5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 113.98972,12.359924 -2e-5,7.053025 4.03442,-2e-6 1e-5,-7.053022 -4.03441,-1e-6" />
+                        <path class="room" id="L3.H1" title="L3.H1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 149.49262,40.571981 -10e-6,7.053014 4.03442,1e-6 v -7.053015 h -4.03441" />
+                        <path class="room" id="L3.G1" title="L3.G1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.45819,40.57199 v 7.053006 l 4.03442,-1e-6 10e-6,-7.053014 -4.03443,9e-6" />
+                        <path class="room" id="L3.G3" title="L3.G3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.4582,26.465965 -1e-5,7.053004 h 4.03442 l 10e-6,-7.053005 -4.03442,1e-6" />
+                        <path class="room" id="L3.H4" title="L3.H4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 149.49261,19.412942 10e-6,7.053022 4.03441,1e-6 v -7.053022 l -4.03442,-10e-7" />
+                        <path class="room" id="L3.G4" title="L3.G4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.4582,19.41295 v 7.053015 l 4.03442,-1e-6 -10e-6,-7.053022 -4.03441,8e-6" />
+                        <path class="room" id="L3.G2" title="L3.G2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.45819,33.518969 v 7.053021 l 4.03443,-9e-6 v -7.053008 l -4.03443,-4e-6" />
+                        <path class="room" id="L3.H2" title="L3.H2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 149.49262,33.518973 v 7.053008 h 4.03441 l 1e-5,-7.053012 -4.03442,4e-6" />
+                        <path class="room" id="L3.H3" title="L3.H3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 149.49262,26.465964 -10e-6,7.053005 h 4.03441 l 1e-5,-7.053004 -4.03441,-1e-6" />
+                        <path class="room" id="L3.J1" title="L3.J1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 166.9751,40.571986 v 7.053009 l 4.03441,1e-6 v -7.053005 l -4.03441,-5e-6" />
+                        <path class="room" id="L3.I1" title="L3.I1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.94068,40.571988 v 7.053008 l 4.0344,3e-6 2e-5,-7.053008 -4.03444,-4e-6" />
+                        <path class="room" id="L3.I3" title="L3.I3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.94067,26.465965 10e-6,7.053004 h 4.03442 l -1e-5,-7.053005 -4.03442,1e-6" />
+                        <path class="room" id="L3.J4" title="L3.J4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 166.97511,19.412938 -2e-5,7.053026 4.03443,-8e-6 -3e-5,-7.053013 h -4.0344" />
+                        <path class="room" id="L3.I4" title="L3.I4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.94069,19.412938 -2e-5,7.053027 4.03442,-1e-6 v -7.053021 h -4.03442" />
+                        <path class="room" id="L3.I2" title="L3.I2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 162.94067,33.518973 v 7.053008 l 4.03443,10e-6 v -7.053022 l -4.03443,4e-6" />
+                        <path class="room" id="L3.J2" title="L3.J2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 166.9751,33.518969 v 7.053022 h 4.03441 v -7.053022 h -4.03441" />
+                        <path class="room" id="L3.J3" title="L3.J3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 166.97509,26.465964 1e-5,7.053005 h 4.03441 l 1e-5,-7.053013 -4.03443,8e-6" />
+                        <path class="room" id="L3.K4" title="L3.K4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 149.49261,83.975173 v 7.053012 l 4.03442,-10e-7 -2e-5,-7.05301 -4.0344,-10e-7" />
+                        <path class="room" id="L3.L4" title="L3.L4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.45819,83.975174 v 7.052999 l 4.03442,1.2e-5 v -7.05301 l -4.03443,-2e-6" />
+                        <path class="room" id="L3.L2" title="L3.L2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.45819,69.869127 1e-5,7.053031 h 4.0344 l 1e-5,-7.053018 -4.03442,-1.3e-5" />
+                        <path class="room" id="L3.K1" title="L3.K1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 149.49262,62.816107 -10e-6,7.053033 4.0344,-1.3e-5 1e-5,-7.05302 -4.03442,-1e-6" />
+                        <path class="room" id="L3.L1" title="L3.L1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.4582,62.816107 -1e-5,7.05302 4.03442,1.3e-5 -1e-5,-7.053034 -4.03441,1e-6" />
+                        <path class="room" id="L3.L3" title="L3.L3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 145.45818,76.922158 v 7.053015 l 4.03443,2e-6 -1e-5,-7.053017 h -4.03442" />
+                        <path class="room" id="L3.K3" title="L3.K3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 149.4926,76.922158 1e-5,7.053017 4.0344,-10e-7 1e-5,-7.053015 -4.03442,-10e-7" />
+                        <path class="room" id="L3.K2" title="L3.K2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 149.49261,69.86914 -1e-5,7.053018 4.03442,10e-7 -1e-5,-7.053032 -4.0344,1.3e-5" />
+                        <path class="room" id="L3 Big Breakout Space" title="Big Breakout Space" data-bs-toggle="tooltip"
+                            onclick="check(id)" data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;
+                            stroke:#000000;
+                            stroke-linecap:butt;
+                            stroke-linejoin:miter;
+                            stroke-miterlimit:4;
+                            stroke-dasharray:0.793749, 0.793749;
+                            stroke-dashoffset:0.74083236;
+                            stroke-opacity:1" d="M 92.604156,92.86875 H 42.333333 V 68.527083 l 50.270858,-0.0143 z"
+                            sodipodi:nodetypes="ccccc" />
+                        <path class="room" id="L3 Breakout Space Surf" title="Breakout Space Surf" data-bs-toggle="tooltip"
+                            onclick="check(id)" data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;
+                            stroke:#000000;
+                            stroke-linecap:butt;
+                            stroke-linejoin:miter;
+                            stroke-miterlimit:4;
+                            stroke-dasharray:0.793749, 0.793749;
+                            stroke-dashoffset:0.74083236;
+                            stroke-opacity:1"
+                            d="M 43.127083,11.641667 55.35619,8.8334365 65.307759,7.2058009 V 30.263746 L 43.127083,30.427083 V 11.641667"
+                            sodipodi:nodetypes="cccccc" />
+                        <path class="room" id="L3 Breakout Space Lockers" title="Breakout Space Lockers" data-bs-toggle="tooltip"
+                            onclick="check(id)" data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;
+                            stroke:#000000;
+                            stroke-linecap:butt;
+                            stroke-linejoin:miter;
+                            stroke-miterlimit:4;
+                            stroke-dasharray:0.793749, 0.793749;
+                            stroke-dashoffset:0.74083236;
+                            stroke-opacity:1" d="m 43.127083,23.8125 h -17.4625 l 0,24.341667 17.588351,0.01338 z"
+                            sodipodi:nodetypes="ccccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.270113px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 203.28484,33.247705 v 24.414306 l -18.82729,-2.5e-5 V 92.927064 L 79.375,92.86875 l 0,106.89167 H 44.979167 v 5.29166 L 28.460072,212.2858 6.6145833,224.36667 V 27.78125 H 10.583333 V 23.8125 l 32.54375,2e-6 V 11.641667 L 55.35619,8.8334345 65.307759,7.2057989 75.528288,6.1207208 l 28.240912,1e-6 18.82729,1.3563529 16.13767,1.3563507 c 5.37922,1.3563416 17.72058,4.1290856 17.48249,4.0690316 l 18.82727,6.781762 16.13767,6.781734 12.10325,6.78175 v 0"
+                            id="path3812" sodipodi:nodetypes="cccccccccccccccccccccccccc" />
+                        <path class="room" id="L3 Printers" title="Printers" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:0.26499999;
+                            stroke-linecap:butt;
+                            stroke-linejoin:miter;
+                            stroke-miterlimit:0;
+                            stroke-dasharray:0.26499999, 0.52999997;
+                            stroke-dashoffset:1.13949991;
+                            stroke-opacity:1" d="m 92.604167,68.527083 0,-6.349999 18.520833,-10e-7 0,6.35 z"
+                            sodipodi:nodetypes="ccccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.270113px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 184.45755,57.661986 V 23.753254" id="path8182" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.270113px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 184.45756,48.981354 18.8273,-2e-6" id="path8184" />
+                        <ellipse
+                            style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.212348;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+                            id="path8208" cx="193.9005" cy="39.017418" rx="8.0540895" ry="8.1232224" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.270113px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 193.8712,48.981354 -10e-6,-1.898887" id="path8345" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.295894px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 203.28484,41.385802 -1.61375,-7e-6" id="path8347" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 6.6145833,152.13542 H 79.375" id="path4871" sodipodi:nodetypes="cc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 63.499999,137.58333 H 42.333333 v 14.55208" id="path5146" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 42.333333,152.13541 V 152.4" id="path5148" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 30.427083,152.13542 v -38.36459 c -9.872723,7e-5 -7.761111,0 -11.90625,0 l 0,-19.843747 H 6.6145833"
+                            id="path5150" sodipodi:nodetypes="ccccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 6.8791667,103.71667 H 18.520833" id="path5154" sodipodi:nodetypes="cc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 18.520833,113.77083 H 6.6145839" id="path5156" />
+                        <path class="room" id="Dyfed" title="Dyfed" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 25.664583,48.154167 4.233333,-1e-6 v 9.260417 H 6.6145832 V 27.78125 H 10.583333 V 23.8125 l 15.08125,0 v 24.341667"
+                            sodipodi:nodetypes="ccccccccc" />
+                        <path class="room" id="Abertawe" title="Abertawe" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 6.6145832,57.414583 H 29.897916 V 77.258332 H 6.6145832 Z" />
+                        <path class="room" id="Glamorgan" title="Glamorgan" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 29.897916,77.258332 v 16.66875 H 6.6145832 v -16.66875 z" />
+                        <path class="room" id="L3 Kitchen" title="Kitchen" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 42.333333,137.58333 V 93.927082 92.868749 l 37.041667,1e-6 v 20.90208 l -15.875,0 0,23.8125 -21.166667,0"
+                            sodipodi:nodetypes="ccccccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 6.6145832,132.29166 H 30.427083" id="path14907" />
+                        <path class="room" id="Comms Room" title="Comms Room" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 165.36458,57.679167 19.05,-10e-7 v 35.189583 h -19.05 z" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 128.32292,62.177083 h 7.93749 v 7.937499 h -7.93749 z" id="path18417" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 124.35417,46.302083 h 15.87499 V 29.104166 h -15.87499 z" id="path18515" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 132.29166,29.104166 V 46.302083" id="path18517" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.24745;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:4.30677"
+                            id="path18565" sodipodi:type="arc" sodipodi:cx="132.29167" sodipodi:cy="29.104166"
+                            sodipodi:rx="7.9375" sodipodi:ry="6.614583" sodipodi:start="3.143338" sodipodi:end="0"
+                            sodipodi:arc-type="slice"
+                            d="m 124.35418,29.092621 a 7.9375,6.614583 0 0 1 7.94442,-6.603035 7.9375,6.614583 0 0 1 7.93057,6.61458 h -7.9375 z" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.219133px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 79.375,113.77083 0,23.8125 H 63.5 v -23.8125 z" id="caerdydd333"
+                            sodipodi:nodetypes="ccccc" />
+                        <path class="room" id="L3 VR Space" title="VR Space" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:0.26499999;
+                            stroke-linecap:butt;
+                            stroke-linejoin:miter;
+                            stroke-miterlimit:0;
+                            stroke-dasharray:0.26499999, 0.52999997;
+                            stroke-dashoffset:1.13949991;
+                            stroke-opacity:1" sodipodi:type="arc" sodipodi:cx="132.02708" sodipodi:cy="15.452291"
+                            sodipodi:rx="11.690883" sodipodi:ry="6.1745462"
+                            d="m 143.71619,15.560051 a 11.690883,6.1745462 0 0 1 -11.84213,6.066257 11.690883,6.1745462 0 0 1 -11.53741,-6.2279 11.690883,6.1745462 0 0 1 11.74145,-6.1206049 11.690883,6.1745462 0 0 1 11.63987,6.1744879"
+                            sodipodi:open="true" />
+                    </svg>
+                </div>
+                <div id="section5" class="container-fluid bg-info accordion-body collapse in refresh"
+                    style="padding-top:70px;padding-bottom:70px" data-parent="#accordionEx" role="tablist">
+
+                    <!--<h1>Fourth Floor</h1>-->
+                    <svg viewBox="0 0 185 80" width="1500" version="1.1" id="svgfourth"
+                        inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" sodipodi:docname="fourthfloor.svg"
+                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cc="http://web.resource.org/cc/"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                        <text xml:space="preserve"
+                            style="font-style:normal;font-weight:normal;font-size:3.88056px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+                            x="18.377678" y="70.95018" id="text25384">
+                            <tspan sodipodi:role="line" id="tspan25382"
+                                style="font-size:3.88056px;stroke-width:0.264583" x="19.377678" y="70.95018">Ynys Mon
+                            </tspan>
+                        </text>
+                        <path class="room" title="L4.B1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 37.570847,29.096543 v 7.053021 l 4.034419,6e-6 v -7.053022 l -4.034419,-5e-6"
+                            id="L4.B1" />
+                        <path class="room" title="L4.A1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 33.536428,29.096556 -2.1e-5,7.053006 4.03444,2e-6 -1.1e-5,-7.05301 -4.034408,2e-6"
+                            id="L4.A1" />
+                        <path class="room" title="L4.A3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 33.536428,14.990521 v 7.053021 h 4.034419 l -1.1e-5,-7.053023 -4.034408,2e-6"
+                            id="L4.A3" />
+                        <path class="room" title="L4.B4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 37.570836,7.9375169 v 7.0530021 l 4.03443,1.2e-5 V 7.9375179 l -4.03443,-10e-7"
+                            id="L4.B4" />
+                        <path class="room" title="L4.A4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 33.536407,7.9375109 2.1e-5,7.0530101 4.034408,-2e-6 V 7.9375169 l -4.034429,-6e-6"
+                            id="L4.A4" />
+                        <path class="room" title="L4.A2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 33.536428,22.043542 -1e-5,7.053019 4.034418,-7e-6 1.1e-5,-7.053012 h -4.034419"
+                            id="L4.A2" />
+                        <path class="room" title="L4.B2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 37.570847,22.043542 -1.1e-5,7.053012 4.03443,7e-6 v -7.053022 l -4.034419,3e-6"
+                            id="L4.B2" />
+                        <path class="room" title="L4.B3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 37.570836,14.990519 1.1e-5,7.053023 4.034419,-3e-6 v -7.053008 l -4.03443,-1.2e-5"
+                            id="L4.B3" />
+                        <path class="room" title="L4.D1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 56.091659,35.801887 1.1e-5,7.053004 4.034411,4e-6 v -7.053022 l -4.034422,1.4e-5"
+                            id="L4.D1" />
+                        <path class="room" title="L4.C1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 52.05724,35.801875 -1e-5,7.053014 4.034429,8e-6 v -7.053023 l -4.034419,1e-6"
+                            id="L4.C1" />
+                        <path class="room" title="L4.C3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 52.05724,21.695859 v 7.053007 l 4.03443,-10e-6 -1.1e-5,-7.053 -4.034419,3e-6"
+                            id="L4.C3" />
+                        <path class="room" title="L4.D4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 56.09167,14.642838 -1.1e-5,7.053018 4.034412,-10e-7 2e-5,-7.053011 -4.034432,-1.4e-5"
+                            id="L4.D4" />
+                        <path class="room" title="L4.C4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 52.05724,14.642832 v 7.053027 l 4.034419,-3e-6 V 14.64283 l -4.034419,2e-6"
+                            id="L4.C4" />
+                        <path class="room" title="L4.D2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 56.091638,28.748863 2.1e-5,7.053011 4.034422,-10e-7 -10e-6,-7.053009 -4.034433,-1e-6"
+                            id="L4.D2" />
+                        <path class="room" title="L4.C2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 52.05724,28.748866 v 7.053022 l 4.034419,-1.4e-5 -2.1e-5,-7.053011 -4.034398,3e-6"
+                            id="L4.C2" />
+                        <path class="room" title="L4.D3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 56.091659,21.695856 1.1e-5,7.053 4.034411,-2e-6 -10e-6,-7.052999 -4.034412,10e-7"
+                            id="L4.D3" />
+                        <path class="room" title="L4.D5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 56.091659,7.5898214 V 14.64283 l 4.034432,1.4e-5 -1e-5,-7.0530246 -4.034422,2e-6"
+                            id="L4.D5" />
+                        <path class="room" title="L4.C5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 52.05724,7.5898234 v 7.0530086 l 4.034419,-2e-6 V 7.5898214 l -4.034419,2e-6"
+                            id="L4.C5" />
+                        <path class="room" title="L4.F1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 74.083333,36.149566 v 7.053012 l 4.0344,10e-7 1e-5,-7.05302 -4.03441,7e-6" id="L4.F1" />
+                        <path class="room" title="L4.E1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 70.048913,36.149568 v 7.053011 l 4.0344,2e-6 10e-6,-7.053028 -4.03442,1.3e-5"
+                            id="L4.E1" />
+                        <path class="room" title="L4.E3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 70.048913,22.043527 1e-5,7.053022 4.0344,1e-6 1e-5,-7.053006 -4.03442,-7e-6"
+                            id="L4.E3" />
+                        <path class="room" title="L4.F4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 74.083333,14.990522 v 7.053009 l 4.03441,6e-6 -1e-5,-7.053014 -4.03442,2e-6"
+                            id="L4.F4" />
+                        <path class="room" title="L4.E4" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 70.048913,14.990523 v 7.053004 l 4.03442,1.7e-5 -2e-5,-7.053019 -4.03441,-4e-6"
+                            id="L4.E4" />
+                        <path class="room" title="L4.E2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 70.048903,29.096552 v 7.053014 l 4.03442,-1.3e-5 V 29.09655 l -4.03442,2e-6"
+                            id="L4.E2" />
+                        <path class="room" title="L4.F2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 74.083323,29.09655 v 7.053003 l 4.03442,6e-6 V 29.09655 h -4.03442" id="L4.F2" />
+                        <path class="room" title="L4.F3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 74.083333,22.043544 -1e-5,7.053006 h 4.03442 v -7.053013 l -4.03441,7e-6" id="L4.F3" />
+                        <path class="room" title="L4.E5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 70.048903,7.937512 v 7.053009 l 4.03441,4e-6 2e-5,-7.053025 -4.03443,1.2e-5"
+                            id="L1.E5" />
+                        <path class="room" title="L4.F5" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 74.083333,7.9375 -2e-5,7.053025 4.03442,-2e-6 1e-5,-7.053022 -4.03441,-1e-6"
+                            id="L4.F5" />
+                        <path class="room" title="L4.H1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 110.26559,35.975704 -1e-5,7.053014 4.03442,1e-6 v -7.053015 h -4.03441" id="L4.H1" />
+                        <path class="room" title="L4.G2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 106.23116,35.975713 v 7.053006 l 4.03442,-1e-6 1e-5,-7.053014 -4.03443,9e-6"
+                            id="L4.G1" />
+                        <path class="room" title="L4.G3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 106.23117,21.869688 -1e-5,7.053004 h 4.03442 l 1e-5,-7.053005 -4.03442,1e-6"
+                            id="L4.G3" />
+                        <path class="room" title="L4.G2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 106.23116,28.922692 v 7.053021 l 4.03443,-9e-6 v -7.053008 l -4.03443,-4e-6"
+                            id="L4.G2" />
+                        <path class="room" title="L4.H2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 110.26559,28.922696 v 7.053008 H 114.3 l 1e-5,-7.053012 -4.03442,4e-6" id="L4.H2" />
+                        <path class="room" title="L4.H3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 110.26559,21.869687 -1e-5,7.053005 h 4.03441 l 1e-5,-7.053004 -4.03441,-1e-6"
+                            id="L4.H3" />
+                        <path class="room" title="L4.J1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.25724,35.975716 v 7.053009 l 4.03441,10e-7 v -7.053005 l -4.03441,-5e-6"
+                            id="L4.J1" />
+                        <path class="room" title="L4.I1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.22282,35.975718 v 7.053008 l 4.0344,3e-6 2e-5,-7.053008 -4.03444,-4e-6"
+                            id="L4.i1" />
+                        <path class="room" title="L4.I3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.22281,21.869695 1e-5,7.053004 h 4.03442 l -1e-5,-7.053005 -4.03442,1e-6"
+                            id="L1.I3" />
+                        <path class="room" title="L4.I2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 124.22281,28.922703 v 7.053008 l 4.03443,1e-5 v -7.053022 l -4.03443,4e-6" id="L1.I2" />
+                        <path class="room" title="L4.J2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.25724,28.922699 v 7.053022 h 4.03441 v -7.053022 h -4.03441" id="L4.J2" />
+                        <path class="room" title="L4.J3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 128.25723,21.869694 1e-5,7.053005 h 4.03441 l 1e-5,-7.053013 -4.03443,8e-6"
+                            id="L4.J3" />
+                        <path class="room" title="L4.L2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 129.58332,64.222146 1e-5,7.053031 h 4.0344 l 1e-5,-7.053018 -4.03442,-1.3e-5"
+                            id="L4.L2" />
+                        <path class="room" title="L4.K1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 133.61775,57.169126 -1e-5,7.053033 4.0344,-1.3e-5 1e-5,-7.05302 -4.03442,-10e-7"
+                            id="L4.K1" />
+                        <path class="room" title="L4.L1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 129.58333,57.169126 -1e-5,7.05302 4.03442,1.3e-5 -1e-5,-7.053034 -4.03441,10e-7"
+                            id="L4.L1" />
+                        <path class="room" title="L4.L3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 129.58331,71.275177 v 7.053015 l 4.03443,2e-6 -1e-5,-7.053017 h -4.03442" id="L4.L3" />
+                        <path class="room" title="L4.K3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 133.61773,71.275177 1e-5,7.053017 4.0344,-10e-7 1e-5,-7.053015 -4.03442,-10e-7"
+                            id="L4.K3" />
+                        <path class="room" title="L4.K2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 133.61774,64.222159 -1e-5,7.053018 4.03442,10e-7 -1e-5,-7.053032 -4.0344,1.3e-5"
+                            id="L4.K2" />
+                        <path class="room" title="L4.N2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 111.3239,64.203008 1e-5,7.053031 h 4.0344 l 1e-5,-7.053018 -4.03442,-1.3e-5"
+                            id="L4.N2" />
+                        <path class="room" title="L4.M1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 115.35833,57.149988 -10e-6,7.053033 4.0344,-1.3e-5 1e-5,-7.05302 -4.03442,-10e-7"
+                            id="L4.M1" />
+                        <path class="room" title="L4.N1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 111.32391,57.149988 -1e-5,7.05302 4.03442,1.3e-5 -1e-5,-7.053034 -4.03441,10e-7"
+                            id="L4.N1" />
+                        <path class="room" title="L4.N3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 111.32389,71.256039 v 7.053015 l 4.03443,2e-6 -1e-5,-7.053017 h -4.03442" id="L4.N3" />
+                        <path class="room" title="L4.M3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 115.35831,71.256039 1e-5,7.053017 4.0344,-10e-7 1e-5,-7.053015 -4.03442,-10e-7"
+                            id="L4.M3" />
+                        <path class="room" title="L4.M2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 115.35832,64.203021 -1e-5,7.053018 4.03442,10e-7 -1e-5,-7.053032 -4.0344,1.3e-5"
+                            id="L4.M2" />
+                        <path class="room" title="L4.P2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 73.223683,64.20301 1e-5,7.053031 h 4.0344 l 1e-5,-7.053017 -4.03442,-1.3e-5"
+                            id="L4.P2" />
+                        <path class="room" title="L4.O1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 77.258113,57.14999 -10e-6,7.053034 4.0344,-1.3e-5 1e-5,-7.05302 -4.03442,-10e-7"
+                            id="L4.O1" />
+                        <path class="room" title="L4.P1" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 73.223693,57.14999 -1e-5,7.05302 4.03442,1.3e-5 -1e-5,-7.053034 -4.03441,1e-6"
+                            id="L4.P1" />
+                        <path class="room" title="L4.P3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 73.223673,71.256041 v 7.053015 l 4.03443,2e-6 -1e-5,-7.053017 h -4.03442" id="L4.P3" />
+                        <path class="room" title="L4.O3" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 77.258093,71.256041 1e-5,7.053017 4.0344,-10e-7 1e-5,-7.053015 -4.03442,-10e-7"
+                            id="L4.O3" />
+                        <path class="room" title="L4.O2" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="m 77.258103,64.203023 -1e-5,7.053018 4.03442,10e-7 -1e-5,-7.053032 -4.0344,1.3e-5"
+                            id="L4.O2" />
+                        <path class="room" title="Breakout Space TV" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;
+                            stroke:#000000;
+                            stroke-linecap:butt;
+                            stroke-linejoin:miter;
+                            stroke-miterlimit:4;
+                            stroke-dasharray:0.793749, 0.793749;
+                            stroke-dashoffset:0.74083236;
+                            stroke-opacity:1"
+                            d="m 6.6145863,11.286356 9.5249997,-2.645834 9.525,-1.8520833 V 30.071772 H 6.6145863 V 11.286356"
+                            id="L4 Breakout Space TV" sodipodi:nodetypes="cccccc" />
+                        <path class="room" title="Breakout Space Lockers" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3;
+                            stroke:#000000;
+                            stroke-linecap:butt;
+                            stroke-linejoin:miter;
+                            stroke-miterlimit:4;
+                            stroke-dasharray:0.793749, 0.793749;
+                            stroke-dashoffset:0.74083236;
+                            stroke-opacity:1" d="m 39.6875,60.060417 h 12.7 9.525 v 19.84375 l -22.225,0 0,-19.84375"
+                            id="L4 Breakout Space Lockers" sodipodi:nodetypes="cccccc" />
+                        <path class="room" id="L4 Printers" title="Printers" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:0.26499999;
+                            stroke-linecap:butt;
+                            stroke-linejoin:miter;
+                            stroke-miterlimit:0;
+                            stroke-dasharray:0.26499999, 0.52999997;
+                            stroke-dashoffset:1.13949991;
+                            stroke-opacity:1" d="m 6.6145863,43.036356 v -6.349999 l 18.7854177,-10e-7 v 6.35 z"
+                            sodipodi:nodetypes="ccccc" />
+                        <path class="room" title="Ynys Mon" data-bs-toggle="tooltip" onclick="check(id)"
+                            data-toggle="modal" data-target="#ResultsModal" style="stroke-width:.3"
+                            d="M 16.404167,60.060417 H 39.6875 v 19.84375 l -23.283333,0 z" id="Ynys Mon"
+                            sodipodi:nodetypes="ccccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 88.370863,55.736356 h 7.93749 v 7.937499 h -7.93749 z" id="path18417" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 84.137483,39.596768 H 100.01247 V 22.398851 H 84.137483 Z" id="path18515" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 92.074973,22.398851 V 39.596768" id="path18517" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.24745;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:4.30677"
+                            id="path18565" sodipodi:type="arc" sodipodi:cx="92.075058" sodipodi:cy="22.398849"
+                            sodipodi:rx="7.9375" sodipodi:ry="6.614583" sodipodi:start="3.143338" sodipodi:end="0"
+                            sodipodi:arc-type="slice"
+                            d="m 84.13757,22.387305 a 7.9375,6.614583 0 0 1 7.944415,-6.603036 7.9375,6.614583 0 0 1 7.930575,6.61458 h -7.937502 z" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="M 16.404167,79.904167 H 6.6145833 l 3e-6,-68.617811" id="path3544"
+                            sodipodi:nodetypes="ccc" />
+                        <path
+                            style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+                            d="m 39.6875,79.904167 h 107.68542 l -0.26459,-55.124062 -15.08125,-6.35 -17.4625,-5.820833 L 97.366663,8.6405219 79.375003,5.9946886 61.118752,4.9363553 H 43.920835 l -18.256249,1.8520833 -9.525,1.8520834 -9.5249997,2.645834"
+                            id="path3793" sodipodi:nodetypes="cccccccccccc" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div id="background-picture">
+    </div>
+    <script>
+        function check(id) {
+            var svgid = id;
+            document.cookie = svgid;
+            document.getElementById("id-name").innerHTML = svgid;
+            document.getElementById("formsvgid").innerHTML = svgid;
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                 document.getElementById("id-name").innerHTML = this.responseText;
+                }
+            };
+            xmlhttp.open("GET", "print.php?q=" + svgid, true);
+            xmlhttp.send();
+        }
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+    </script>
+    <div class="modal fade" id="ResultsModal" role="dialog">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <text class="h4">Results</text>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <text class="h4" id="id-name"></text>
+                    <!--<br>-->
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#AddModal"
+                        onclick="reloadadd(); setsvgid()">Add Data</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="AddModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <text class="h4" id="formsvgid">Add Data</text>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <iframe id="iframe" width="100%" height="500px" src="add.html" frameborder="0"> </iframe>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
